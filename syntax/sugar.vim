@@ -8,11 +8,11 @@ endif
 runtime! syntax/c.vim
 unlet b:current_syntax
 
-" C++ extensions
+" C++11 extensions
 syn keyword cConstant		nullptr
 syn keyword cppType			inline virtual explicit export bool wchar_t
-syn match   cppCast		    "\<\(const\|static\|dynamic\|reinterpret\)_cast\s*<"me=e-1
-syn match   cppCast		    "\<\(const\|static\|dynamic\|reinterpret\)_cast\s*$"
+syn match   cppCast		    "\<\(const\|static\|dynamic\|reinterpret\|duration\)_cast\s*<"me=e-1
+syn match   cppCast		    "\<\(const\|static\|dynamic\|reinterpret\|duration\)_cast\s*$"
 syn keyword cppStorageClass	mutable
 syn keyword cppStructure	class typename template namespace
 syn keyword cppNumber		NPOS

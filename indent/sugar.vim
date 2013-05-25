@@ -18,13 +18,6 @@ if exists("*GetSugarIndent")
 endif
 
 function! GetSugarIndent()		" Disable All Indent
-  let lnum = prevnonblank(v:lnum - 1)
-  if lnum == 0 | return 0 | endif
-  let indent = indent(lnum)
   let cindent = indent(v:lnum)
-  let increase = indent + &sw
-  if indent == indent(lnum)
-    let indent = cindent <= indent ? -1 : increase
-  endif
-  return indent
+  return cindent
 endf
